@@ -1,0 +1,46 @@
+.startmenu-backdrop {
+  position: fixed;
+  left: 0; bottom: 0;
+  width: 100vw; height: 100vh;
+  background: transparent;
+  z-index: 1200;
+}
+
+.startmenu {
+  position: absolute;
+  left: 50%;
+  bottom: 70px;
+  transform: translateX(-50%);
+  min-width: 310px;
+  min-height: 250px;
+  background: rgba(250,250,255,0.99);
+  box-shadow: 0 6px 32px #0003;
+  border-radius: 22px;
+  padding: 26px 24px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  animation: pop 0.16s cubic-bezier(.5,1.5,.5,1) both;
+}
+
+@keyframes pop {
+  0% { transform: translateX(-50%) scale(0.9); opacity: 0; }
+  100% { transform: translateX(-50%) scale(1); opacity: 1; }
+}
+.startmenu-apps {
+  margin-top: 18px;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+.startmenu-apps li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 9px;
+  transition: background 0.15s;
+}
+.startmenu-apps li:hover {
+  background: #e7edfa;
+}
